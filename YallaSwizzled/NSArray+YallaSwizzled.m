@@ -13,7 +13,7 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        Yalla_InstanceMethodSwizzled(objc_getClass("__NSArrayI"), @selector(objectAtIndex:), @selector(yalla_objectAtIndex:));
+        Yalla_InstanceMethodSwizzled(objc_getClass("__NSSingleObjectArrayI"), @selector(objectAtIndex:), @selector(yalla_objectAtIndex:));
     });
 }
 
@@ -24,5 +24,4 @@
     }
     return nil;
 }
-
 @end
